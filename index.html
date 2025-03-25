@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Har daqiqada yangilanadigan H1</title>
+</head>
+<body>
+  <h1 id="dynamic-h1">Hozirgi vaqt: </h1>
+
+  <script>
+    function updateH1() {
+      const h1 = document.getElementById('dynamic-h1');
+      const now = new Date();
+      const currentTime = now.toLocaleTimeString();
+      h1.textContent = 'Hozirgi vaqt: ' + currentTime;
+    }
+
+    // Dastlab yangilab qo’yamiz
+    updateH1();
+
+    // Har daqiqada (60 sekundda) yangilab borish
+    setInterval(updateH1, 10000);
+  </script>
+</body>
+</html>
